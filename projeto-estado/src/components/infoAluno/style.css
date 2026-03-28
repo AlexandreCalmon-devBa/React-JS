@@ -1,0 +1,65 @@
+/* style.css — InfoAluno */
+
+.info-aluno {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.info-aluno:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Barra de cor no topo */
+.info-aluno::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-aluno), #60a5fa);
+  border-radius: 20px 20px 0 0;
+}
+
+.info-aluno h2 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-aluno);
+  margin: 0 0 24px;
+  padding: 0;
+  border: none;
+}
+
+.info-aluno p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.4;
+  gap: 16px;
+}
+
+.info-aluno p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Estiliza o "label" (antes dos dois-pontos) */
+.info-aluno p::first-line {
+  font-weight: 500;
+}

@@ -1,16 +1,16 @@
 import './style.css'
 
-function InfoAluno(){
-    const nome = "Alexandre Calmon"
+function InfoPirata(){
+    const Pirata = "Alexandre Calmon"
     const idade = 20
     const curso = "Desenvolvimento de Sistemas"
 
 
     return(
 
-    <div className='info-aluno'>
-        <h2>Informações do Aluno:</h2>
-        <p><strong>Nome:: {nome}</strong></p>
+    <div className='info-Pirata'>
+        <h2>Informações do Pirata:</h2>
+        <p><strong>Pirata:: {Pirata}</strong></p>
         <p><strong>Idade: {idade}</strong></p>
         <p><strong>Curso: {curso}</strong></p>
         </div>
@@ -18,4 +18,4 @@ function InfoAluno(){
 
 }
 
-export default InfoAluno
+export default InfoPirata

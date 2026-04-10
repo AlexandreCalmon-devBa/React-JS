@@ -5,7 +5,7 @@ import './style.css'
 
 function InfoCurso(){
 
-    const [nome, setNome] = useState("Programação de Aplicativos")
+    const [Pirata, setPirata] = useState("Programação de Aplicativos")
     const [cargaHoraria, setCargaHoraria] = useState(90)
     const [local, setLocal] = useState("SENAI")
 
@@ -13,7 +13,7 @@ function InfoCurso(){
     return (
         <div className='info-curso'>
             <h2>Dados do Curso:</h2>
-            <p><strong>Nome:</strong> {nome}</p>
+            <p><strong>Pirata:</strong> {Pirata}</p>
             <p><strong>Carga Horaria:</strong> {cargaHoraria}</p>
             <p><strong>local:</strong> {local}</p>
         </div>

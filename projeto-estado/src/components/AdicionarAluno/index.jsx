@@ -1,50 +1,50 @@
 import { useState } from 'react'
 import './style.css'
 
-function AdicionarAluno() {
-  const [nome, setNome] = useState("")
-  const [email, setEmail] = useState("")
-  const [alunos, setAlunos] = useState([])
+function AdicionarPirata() {
+  const [Pirata, setPirata] = useState("")
+  const [Função, setFunção] = useState("")
+  const [Tripulação, setTripulação] = useState([])
 
-  const handleAdicionarAluno = (event) => {
+  const handleAdicionarPirata = (event) => {
     event.preventDefault()
-    if (nome && email) {
-      setAlunos([...alunos, { nome, email }])
-      setNome("")
-      setEmail("")
+    if (Pirata && Função) {
+      setTripulação([...Tripulação, { Pirata, Função }])
+      setPirata("")
+      setFunção("")
     }
   }
 
   return (
-    <div className="adicionar-aluno">
-      <h2>Adicionar Aluno</h2>
-      <form onSubmit={handleAdicionarAluno}>
+    <div className="adicionar-Pirata">
+      <h2>Adicionar Pirata</h2>
+      <form onSubmit={handleAdicionarPirata}>
         <input
           type="text"
-          placeholder="Nome do aluno"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
+          placeholder="Pirata do Pirata"
+          value={Pirata}
+          onChange={(e) => setPirata(e.target.value)}
         />
         <input
-          type="email"
-          placeholder="E-mail do aluno"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="Função"
+          placeholder="E-mail do Pirata"
+          value={Função}
+          onChange={(e) => setFunção(e.target.value)}
         />
         <button type="submit">Adicionar</button>
       </form>
 
       <hr />
-      <h2>Alunos Adicionados</h2>
+      <h2>Tripulação Adicionados</h2>
 
-      {alunos.length === 0 ? (
-        <p className="lista-vazia">Nenhum aluno adicionado ainda.</p>
+      {Tripulação.length === 0 ? (
+        <p className="lista-vazia">Nenhum Pirata adicionado ainda.</p>
       ) : (
         <ul>
-          {alunos.map((aluno, index) => (
+          {Tripulação.map((Pirata, index) => (
             <li key={index}>
-              <span>{aluno.nome}</span>
-              <span className="aluno-email">{aluno.email}</span>
+              <span>{Pirata.Pirata}</span>
+              <span className="Pirata-Função">{Pirata.Função}</span>
             </li>
           ))}
         </ul>
@@ -53,4 +53,4 @@ function AdicionarAluno() {
   )
 }
 
-export default AdicionarAluno
+export default AdicionarPirata

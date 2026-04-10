@@ -1,0 +1,99 @@
+/* App.css */
+
+/* Fundo temático One Piece (Mar / Aventura) */
+body {
+  /* CAMINHO DA IMAGEM ADICIONADO AQUI: */
+  background-image: url('./assets/background.jpg');
+  background-size: cover; /* Faz a imagem preencher a tela toda */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Deixa o fundo travado quando você rola a página */
+  
+  background-color: #87CEEB; /* Azul céu/mar (cor de fallback) */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 5%,  rgba(255, 215, 0, 0.15) 0%, transparent 55%), /* Brilho Dourado (Tesouro) */
+    radial-gradient(ellipse 60% 50% at 85% 95%, rgba(220, 20, 60, 0.1) 0%, transparent 55%), /* Vermelho */
+    radial-gradient(ellipse 50% 40% at 80% 10%,  rgba(0, 105, 148, 0.1) 0%, transparent 50%); /* Azul profundo */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Wrapper geral - Aumentado para caber os 3 cards */
+.app-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px; /* Aumentado de 520px para dar espaço aos cards */
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Estilo da Logo do One Piece */
+.one-piece-logo {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3)); /* Sombra para destacar do fundo */
+}
+
+.app-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8B0000; /* Vermelho escuro */
+  background-color: #FFD700; /* Fundo Dourado */
+  padding: 6px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 0px #8B0000; /* Sombra sólida estilo HQ/Mangá */
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #111;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+/* Grade de cartões - A magia do lado a lado */
+.app-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Muda de coluna para linha */
+  justify-content: center;
+  gap: 24px; /* Espaçamento entre os cards */
+  flex-wrap: wrap; /* Permite que os cards caiam pra baixo se a tela for pequena (celular) */
+}
+
+/* Estilização interna dos cartões filhos */
+.app-cards > * {
+  flex: 1; /* Faz todos os cards terem a mesma largura base */
+  min-width: 300px; /* Evita que os cards fiquem muito finos em telas menores */
+  margin-top: 0 !important;
+  
+  /* Temática Cartaz de Recompensa (Wanted) para os componentes */
+  background-color: #f4e4bc; /* Cor de pergaminho envelhecido */
+  border: 2px solid #8b4513; /* Borda de madeira/couro */
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}

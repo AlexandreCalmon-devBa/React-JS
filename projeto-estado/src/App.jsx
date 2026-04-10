@@ -1,6 +1,6 @@
 import './App.css'
-import AdicionarAluno from './components/AdicionarAluno'
-import InfoAluno from './components/infoAluno'
+import AdicionarPirata from './components/AdicionarPirata'
+import InfoPirata from './components/infoPirata'
 import InfoCurso from './components/infoCurso'
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
       </header>
 
       <main className="app-cards">
-        <InfoAluno />
+        <InfoPirata />
         <InfoCurso />
-        <AdicionarAluno />
+        <AdicionarPirata />
       </main>
     </div>
   )
